@@ -1,0 +1,31 @@
+ALGORITHM sentence_characters
+VAR
+    phrase : STRING;
+    vowels_nbr, i, caracter_nbr, word_nbr : INTEGER := 0;    
+BEGIN
+    Read(phrase);
+    IF (phrase = "") THEN 
+        write("your phrase is empty")
+        write(caracter_nbr);
+        write(vowels_nbr);
+        write(word_nbr);
+    ELSE
+        caracter_nbr := 1;
+        words_nbr := 1;
+        WHILE (phrase[i] <> ".") DO
+            caracter_nbr := caracter_nbr + 1;
+            IF (phrase[i] = "a" or phrase[i] = "e" or phrase[i] = "u" or phrase[i] = "i" or phrase[i] = "o") THEN
+                vowels_nbr := vowels_nbr + 1;
+            END_IF
+            IF (phrase[i] = " ") THEN
+                word_nbr := word_nbr + 1;
+            END_IF
+            i := i + 1;
+        END_WHILE
+        write(caracter_nbr);
+        write(vowels_nbr);
+        write(word_nbr);
+    END_IF
+    
+END
+        
